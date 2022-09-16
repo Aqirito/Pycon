@@ -7,8 +7,21 @@
     <title>Business Card</title>
 </head>
 <body>
-    <div>
-        hello there!!!!
-    </div>
+    <section class="header">
+        <header>
+          {% block header %}{% endblock %}
+        </header>
+    </section>
+    <section class="content">
+        {% block content %}{% endblock content %}
+  </section>
+  <section class="footer">
+    {% block footer %}
+    <ul style="display: inline-flex;">
+        <li>sdsds</li>
+        <li>SDsd</li>
+    </ul>
+    {% endblock footer %}
+  </section>
 </body>
 </html>
