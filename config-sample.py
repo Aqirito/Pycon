@@ -1,3 +1,5 @@
+#this file should be inside instance/config.py
+
 import os
 import tempfile
 
