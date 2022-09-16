@@ -32,6 +32,9 @@ from src.models import db
 
 from werkzeug.exceptions import HTTPException
 
+# import views
+from src.views import hello 
+
 # login failed handler, from:
 # https://computableverse.com/blog/flask-admin-using-basicauth
 # 登录失败控制器，来源：
@@ -74,5 +77,8 @@ def create_app(test_config=None, run_test=False):
         app.config.from_object('config.StagingConfiguration')
 
     app.config.from_pyfile('config.py')  # instance
+
+    # Register BluePrints
+    app.register_blueprint(hello.bp)
 
     return app
