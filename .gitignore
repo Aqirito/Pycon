@@ -1,0 +1,10 @@
+*env
+*envi
+.python-version
+*.pyc
+__pycache__/
+instance/config.py
+.pytest_cache/
+.coverage
+htmlcov/
+migrations/versions/*
