@@ -9,11 +9,4 @@ def index():
     """
     Display an empty or welcome page
     """
-    return render_template('hello/index.html')
-
-@bp.route('/a')
-def l():
-    """
-    Display an empty or welcome page
-    """
-    return "SDSDSD"
+    return render_template('business-card-list/index.html')

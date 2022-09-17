@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block header %}
+<style>
+    .card-s {
+        width: 35vw;
+        height: 35vh;
+        transform: translate(10px, 100px);
+        border-radius: 20px;
+        background-color: rgb(114, 103, 90);
+    }
+    li {
+        list-style: none;
+    }
+    .mobile-view {
+        display: none;
+    }
+    .pad-card {
+        padding: 10px;
+    }
+    
+    @media (max-width:600px) {
+        .card-s {
+        width: 70vw;
+        height: 33vh;
+        transform: translate(6px, 70px);
+        border-radius: 8px;
+        background-color: rgb(114, 103, 90);
+        box-shadow: 2px 2px 8px rgb(143, 133, 133);
+        }
+        li {
+        list-style: none;
+        }
+        .pad-card {
+        padding: 10px;
+        }   
+
+        .mobile-view {
+            display: block;
+        }
+        .desktop-view {
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="border border-primary card-s">
+    <div class="pad-card">
+        <ul>
+            <li>Business Name:</li>
+            <li>Person Name:</li>
+            <li>No Phone:</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<p></p>
+{% endblock %}
