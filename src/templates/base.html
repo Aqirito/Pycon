@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Card</title>
-</head>
-<body>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <section class="header">
-        <header>
-          {% block header %}{% endblock %}
-        </header>
+      <header>
+        {% block header %}{% endblock %}
+      </header>
     </section>
     <section class="content">
-        {% block content %}{% endblock content %}
-  </section>
-  <section class="footer">
-    {% block footer %}
-    <ul style="display: inline-flex;">
-        <li>sdsds</li>
-        <li>SDsd</li>
-    </ul>
-    {% endblock footer %}
-  </section>
-</body>
+      {% block content %}{% endblock content %}
+    </section>
+    <section class="d-flex position-absolute bottom-0 w-100" style="min-height: 10vh;">
+      {% block footer %}
+      <div class="row w-100 m-2 border rounded-4 shadow-lg" style="background-color: #00aaff;">
+        <div class="col">
+        </div>
+        <div class="col">
+          <h1>footer 2</h1>
+        </div>
+        <div class="col">
+          <h1>footer 3</h1>
+        </div>
+      </div>
+      {% endblock footer %}
+    </section>
+  </body>
 </html>
